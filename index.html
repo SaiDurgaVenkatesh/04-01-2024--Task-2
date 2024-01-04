@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+         .main{
+            width: 350px;
+            height: 616px;
+            border: 1px solid black;
+            margin: 20px auto;
+        }
+        .fa-bars, .title, .missed{
+            display: inline-block;
+        }
+
+        .title{
+            margin-left: 50px;
+
+        }
+
+        .missed{
+            margin-left: 90px;
+            position: relative;
+            top:5px;
+        }
+        .md{
+            border: 0px solid black;
+            background-color: greenyellow;
+        }
+        .pick{
+            border: 1px solid green;
+            width: 170px;
+            height: 60px;
+            background-color: orange;
+        }
+        .Drop{
+            border: 1px solid green;
+            width: 180px;
+            height: 60px;
+            position: relative;
+            left: 170px;
+            top: -62px;
+            background-color: gray;
+        }
+        .para{
+            position: relative;
+            top: -560px;
+            width: 320px;
+            text-align: center;
+            border: px solid black;
+            left: 15px;
+            background-color: white;
+            opacity: .8;
+            font-weight: bold;
+    
+        }
+        .map{
+          position: relative;
+          top: -65px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="md">
+        <i style="margin-top: 20px; margin-left: 30px; font-size: 20px;" class="fa-solid fa-bars"></i>
+        <h3 class="title">BOOK NOW</h3>
+        <img class="missed" width="30px" src="data:image/png;base64,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" alt="">
+        </div>
+
+        <div class="pick">
+            <h2 style="text-align: center;">Pickup</h2>
+        </div>
+
+        <div class="Drop">
+            <h2 style="text-align: center;">Drop Off</h2>
+        </div>
+
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4646221.920517104!2d79.69420456327728!3d12.250411180563319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1704371668391!5m2!1sen!2sin" width="350" height="495" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="para">
+            <p>Bengaluru (also called Bangalore) is the capital of India's southern Karnataka state. The center of India's high-tech industry, the city is also known for its parks and nightlife</p>
+        </div>
+
+        <form>
+            <input style="position: relative; top: -550px; height: 30px; left: 19px; width: 150px; background-color: papayawhip;" type="date">
+            <input style="position: relative; top: -550px; height: 30px; left: 20px; width: 150px; background-color: papayawhip;" type="time">
+        </form>
+
+        <div>
+            <button style="height: 45px; position: relative; top: -260px; width: 330px; left: 10px; background-color: blueviolet;">Next</button>
+        </div>
+</body>
+</html>
